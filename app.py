@@ -1,9 +1,7 @@
 from flask import Flask,request,jsonify
 import os
 import string
-from waitress import serve
 import random
-from bs4 import BeautifulSoup as bs
 import json
 app = Flask(__name__)
 def StartTest(url,mode,filename):
@@ -26,4 +24,4 @@ def home():
     })
 
 if __name__ == '__main__':
-    serve(app, host='0.0.0.0', port=5000)
+    app.run()
